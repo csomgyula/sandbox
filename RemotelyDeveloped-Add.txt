@@ -1,0 +1,8 @@
+A remotely developed file, to test distributed development
+
+Case: The simplest case when someone adds a new file remotely, which is then pulled.
+
+Scenario:
+
+1. Create, develop, commit, push remotely
+2. Pull
