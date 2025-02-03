@@ -1,0 +1,7 @@
+Case: A file added both locally and remotely with the same name
+
+Scenario:
+
+1. Remote: Create, develop, commit, push remotely
+2. Local: Create, develop, commit, push remotely
+3. Local: After 1,2 pull 
