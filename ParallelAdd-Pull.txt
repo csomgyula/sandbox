@@ -2,8 +2,8 @@ Case: A file added both locally and remotely with the same name
 
 Scenario:
 
-1. Remote: Create, develop, commit, push remotely
-2. Local: Create, develop, commit, push remotely
+1. Local: Create, develop, commit, push locally
+2. Remote: Create, develop, commit, push remotely
 3. Local: After 1,2 pull 
 
 This is the version of the file which was is merged
