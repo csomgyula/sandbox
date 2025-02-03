@@ -1,0 +1,5 @@
+A file that was locally developed, that is in the following sequence:
+
+1. Create, edit
+2. Commit locally 
+3. Push to remote
