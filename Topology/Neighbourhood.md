@@ -29,7 +29,7 @@ Find a definition which is visual yet follows (or can be mapped to) the mathemat
 
 Now, can it be mapped to a Topology in the mathematical sense, where border sets become borders in the mathematical sense? Probably not. Because:
 
-- Lets take the following simple sample: $a, b, c, R(a,b), R(b,c)$
+- Lets take the following simple sample: $a, b, c, R(a,b), R(b,c)$ which models the "abc" string
 - Here the bordered sets are
 
 $$
