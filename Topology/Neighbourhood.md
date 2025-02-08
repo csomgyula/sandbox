@@ -2,10 +2,9 @@
 
 ## Adjacency relation
 
-- In this modell the collection is not just a set of where there relation is unimportant, but a system which contains one or more relations that are interesting and meaningful to the user. For example, in the case of text, such a relation is the sequence of characters (previous character, next character)
-
+- In this modell the business modell is not just a set of elements where the relation between elements is unimportant, but a system which contains one or more relations that are interesting and meaningful to the user.
+  - For example, in the case of text, such a relation is the sequence of characters (previous character, next character)
 - Then, the adjacency relation is defined in the model as an element is adjacent to another element if they are in a relation.
-
 - In the view, adjacency is defined differently, geometrically. For example, two bounding boxes are adjacent if there is no other box between them horizontally/vertically
 
 ## Discrete topology
