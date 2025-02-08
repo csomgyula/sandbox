@@ -1,4 +1,4 @@
-# GUI topology
+# GUI 2+1 topology
 
 I think 2D GUI can be described with a 2+1D topology.
 
