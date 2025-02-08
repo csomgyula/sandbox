@@ -19,6 +19,8 @@ The above can be imagined a little more clearly if I define the above in a graph
 
 ### Math-based
 
+Find a definition which is visual yet follows (or can be mapped to) the mathematical definition in order to make the results applicable here. Early attempt:
+
 - Domain: The domain of topology is the elements
 - Base sets: Every element with all edges from it
 - Other sets: Close base sets under union and finite intersection
@@ -29,10 +31,6 @@ Sample:
 - union: $[a ab b bc] [ab b bc c] [[a ab] [b bc]] [[ab] [bc]]$
 
 Conjecture: Closing $base-set$ with the operator $intersection$ and $connected-union$ generates the $connected-sets$
-
-## TODO
-
-Find a definition which is visual yet follows (or can be mapped to) the mathematical definition in order to make the results applicable here. Early attempt:
 
 ## See also
 - https://en.wikipedia.org/wiki/Topology
