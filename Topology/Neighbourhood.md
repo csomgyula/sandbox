@@ -23,7 +23,7 @@ The above can be imagined a little more clearly if I define the above in a graph
 
 Find a definition which is visual yet follows (or can be mapped to) the mathematical definition in order to make the results applicable here. Early attempt:
 
-- Bordered set is a set with a core set and border set. Logically this is a set with an indicator 1/True and 0/False
+- Bordered set is a set with a core set and border set. Logically this is a set with an indicator $1 / True$ and $0 /False$ for each element, where $1$ means it is in the core, $0$ means it is the border. 
 - Union of bordered set is as follows: core becomes the elements which are in the core of either set, border set is the others. Logically this is the logical `or`, $\lor$ of the indicators. 
 - Intersection of bordered set is as follows: core is the elements which are in the core of both sets, bordered sets which are in both sets, bot not in both core. Logically this is the logical `and`, $\land$ of the indicators. 
 
