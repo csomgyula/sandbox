@@ -7,8 +7,8 @@ I think 2D GUI can be described with a 2+1D topology.
 Before I get to it, I'll outline the 1+1D topology, which is the simpler, degenerate case within the 2D GUI:
 
 - In the 1+1D GUI Topology, 1D is a set system in which any two sets are either disjoint or (real) parts of the other.
-  - Conceptually, 1D is a hierarchical partitioning. For example, a text field, in which the elements are the characters, and the field itself is a set. But a text area is also like this, but there it is already a set system: the lines and the entire area. But this still makes it topologically 1D
-  - An important feature of this is that any set can be part of any 2 other sets, only at most 1, if they do not contain each other. This is an equivalent formulation, we will generalize this.
+  - Conceptually, 1D is a hierarchical partitioning. For example, a text field is an 1D Topology: here the elements are the characters, and there is only one set, the field itself. But a text area is also like this, but it is already a set system: both the lines and the entire area is a set.
+  - An important feature of this is that any set can be part of at most 1 out of any 2 other sets, if they do not contain each other. This is an equivalent formulation, we will generalize this in 2D Topology.
 - 1+1D means that such 1D topologies are linked together (in UI this means actions)
   - Visually 1+1D is a directed graph of hierarchical partitions
   - An interesting question here is what is the model of the textual language, it will probably be similar 1D, and what is the topology of the backend models (OO, list, hash table, etc.), I suspect it is also 1D (except for niche applications such as GIS).
