@@ -28,7 +28,7 @@ Sample:
 - intersection: $[ab] [bc]$
 - union: $[a ab b bc] [ab b bc c] [[a ab] [b bc]] [[ab] [bc]]$
 
-Conjecture: Closing $base$ $set$ with the operator $intersection$ and $connected-union$ generates the $connected sets$
+Conjecture: Closing $base-set$ with the operator $intersection$ and $connected-union$ generates the $connected-sets$
 
 ## TODO
 
