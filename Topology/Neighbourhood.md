@@ -27,8 +27,30 @@ Find a definition which is visual yet follows (or can be mapped to) the mathemat
 - Union of bordered set is as follows: core becomes the elements which are in the core of either set, border set is the others. Logically this is the logical `or`, $\lor$ of the indicators. 
 - Intersection of bordered set is as follows: core is the elements which are in the core of both sets, bordered sets which are in both sets, bot not in both core. Logically this is the logical `and`, $\land$ of the indicators. 
 
-Now, can it be mapped to a Topology in the mathematical sense, where border set becomes borders in the mathematical sense?
+Now, can it be mapped to a Topology in the mathematical sense, where border sets become borders in the mathematical sense? Probably not. Because:
 
+- Lets take the following simple sample: $a, b, c, R(a,b), R(b,c)$
+- Here the bordered sets are
+
+$$
+[(a)b], [a(b)] [(b)c)] [b(c)]
+$$
+
+$$
+[(b)]
+$$
+
+$$
+[(ab)] [(bc)]
+$$
+
+$$
+[(ab)c] [a(bc)]
+$$
+
+$$
+[(a)b(c)]
+$$
 ## See also
 - https://en.wikipedia.org/wiki/Topology
 - https://chatgpt.com/share/679ccfdb-5e4c-800f-8ad7-4db76a71fb35
