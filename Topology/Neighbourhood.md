@@ -9,15 +9,26 @@
 
 ## Discrete topology
 
-Based on the adjacency relation, we define topology (set system) as follows (a little different from the mathematical definition):
+Based on the adjacency relation, we define topology (set system) as follows (a little different from the mathematical definition): 
 
 - Domain: The domain of topology is the elements
-- Base sets: Every element and any of its neighbors are part of the base set
-- Other sets: Every set that is formed by the union of the base sets, i.e. closed to the union
-
-However, we do not require closure to the intersection because in this discrete case it would result in a trivial topology, the power set of the elements.
+- Base sets: Every element with any of its neighbours
+- Other sets: Close based sets under connected union
 
 The above can be imagined a little more clearly if I define the above in a graph-like manner. The elements of the graph are the elements, and the edges connect the neighbors. I consider the environment to be the connected sets, where a path between any two points through the points is in the set, no need to exit. I also used the more formal definition to make it appear that we are not taking the classical mathematical definition as a basis, because that would be empty.
+
+### Math-based
+
+- Domain: The domain of topology is the elements
+- Base sets: Every element with all edges from it
+- Other sets: Close base sets under union and finite intersection
+
+Sample: 
+- base set:     $[a ab] [ab b bc] [bc c]$
+- intersection: $[ab] [bc]$
+- union: $[a ab b bc] [ab b bc c] [[a ab] [b bc]] [[ab] [bc]]$
+
+Conjecture: Closing $base set$ with the operator $intersection$ and $connected union$ generates the $connected sets$
 
 ## TODO
 
