@@ -19,6 +19,14 @@ However, we do not require closure to the intersection because in this discrete 
 
 The above can be imagined a little more clearly if I define the above in a graph-like manner. The elements of the graph are the elements, and the edges connect the neighbors. I consider the environment to be the connected sets, where a path between any two points through the points is in the set, no need to exit. I also used the more formal definition to make it appear that we are not taking the classical mathematical definition as a basis, because that would be empty.
 
-See: https://chatgpt.com/share/679ccfdb-5e4c-800f-8ad7-4db76a71fb35
+If we want to follow the mathematical definition, which makes the results applicable here, then an alternative definition is as follows:
+
+- Domain: The domain of topology is the elements
+- Base sets: Every set containing an element and all its neighbors
+- Other sets: Closed under union (and intersection) 
+
+## See also
+- https://en.wikipedia.org/wiki/Topology
+- https://chatgpt.com/share/679ccfdb-5e4c-800f-8ad7-4db76a71fb35
 
 
