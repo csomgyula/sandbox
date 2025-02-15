@@ -26,7 +26,7 @@ $$
 1/1 + 1/2 + 1/3 ... + 1/n
 $$
 
-We split the numbers into log N intervals 1, 2, 4, ..., 2^k where k = log n. We can quickly estime reciprocials within interval with their bounds. Hence we get:
+We split the numbers into log N intervals 1, 2, 4, ..., 2^k where k = log n. We can quickly estimate reciprocials within interval with their bounds. Hence we get:
 
 $$
 1/1 + 1/2 + 1/3 + 1/4 + 1/5 + 1/6 + 1/7 + ... + 1/n \le 1/1 + (1/2 + 1/2) + (1/4 + 1/4 + 1/4 + 1/4)
