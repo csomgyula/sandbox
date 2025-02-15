@@ -46,4 +46,6 @@ $$
 
 where $\Pi(N, M)$ is the number of primes between N, M
 
-# Lower bound (combinatorial, coding)
+# Lower bound
+
+## Combinatorial, coding
