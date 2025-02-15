@@ -41,10 +41,10 @@ Outline:
 * Only exponents of 1 are interesting, hence:
 
 $$
-\Pi(N_1, N_2) * Binom(N_k - N_1 : log N_1) + \Pi(N_2, N_3) * Binom(N_k - N_2 : log N_2) + ... 
+\Pi(N_1, N_2) * Binom(Pi(N_k, N_1) : N/log N_1) + \Pi(N_3, N_2) * Binom(N_k - N_2 : N / log N_2 + ... 
 $$
 
-where $\Pi(N, M)$ is the number of primes between N, M
+where $\Pi(N, M)$ is the number of primes between N, M.
 
 # Lower bound
 
