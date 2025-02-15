@@ -2,7 +2,7 @@
 
 ## Relative prime sieve
 
-Theorem: $Pi(N) \le RelativePrime(N,M)$
+Method: $Pi(N) \le RelativePrime(N,M)$
 
 , where $RelativePrime(N, M)$ is the number of numbers relative prime to all m \le M
 
