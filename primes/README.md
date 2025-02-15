@@ -14,7 +14,7 @@ Theorem: $\Pi(N) \le ~ N \* e^{-(1/p_1 + 1/p_2 + ... + 1/p_k) : p_1, p_2, ..., p
 
 ## Coding
 
-## Bounds
+## Interval split estimation
 
 # Upper Bound (using [problem split](https://en.wikipedia.org/wiki/Divide-and-conquer_algorithm))
 
