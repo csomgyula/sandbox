@@ -20,7 +20,7 @@ Theorem: $\Pi(N) \le ~ N \* e^{-(1/p_1 + 1/p_2 + ... + 1/p_k) : p_1, p_2, ..., p
 
 ## Interval split estimation
 
-* This is a heuristic typically usable for estimatating aggregations (such as e.g. count, sum). Lets say we want a quick method to estimate the reciprocials:
+* This is a heuristic typically usable for estimatating aggregations (such as e.g. count, sum). Lets say we want a quick elementary method to estimate the reciprocials:
 
 $$
 1/1 + 1/2 + 1/3 ... + 1/n
