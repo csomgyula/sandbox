@@ -2,8 +2,9 @@
 
 ## Relative prime sieve
 
-Theorem: $Pi(N) \le RelativePrime(N,M)$, where $RelativePrime(N, M)$ is the number of numbers relative prime to all m \le M
-Proof: trivial
+Theorem: $Pi(N) \le RelativePrime(N,M)$
+
+, where $RelativePrime(N, M)$ is the number of numbers relative prime to all m \le M
 
 Theorem: $Pi(N) \le N \* (1-1/p_1) \* (1-1/p_2) \* ... \* (1 - 1/p_k) : p_1, p_2, ..., p_k <= M$
 
