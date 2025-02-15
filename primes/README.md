@@ -8,7 +8,7 @@ Theorem: $\Pi(N) \le N \* (1-1/p_1) \* (1-1/p_2) \* ... \* (1 - 1/p_k) : p_1, p_
 
 Theorem: $\Pi(N) \le ~ N \* e^{-(1/p_1 + 1/p_2 + ... + 1/p_k) : p_1, p_2, ..., p_k <= M}$
 
-# Upper Bound
+# Upper Bound (using [problem split](https://en.wikipedia.org/wiki/Divide-and-conquer_algorithm))
 
 ## Sub-Method: Sieve small-any primes (using Erathosthenes sieve)
 
