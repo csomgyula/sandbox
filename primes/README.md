@@ -56,7 +56,7 @@ TODO: We need some formula for the reciprocals
 The problem with the above is that the sieve can only use small numbers. Now we look into large primes as well. Outline:
 
 * Since we already sieved small primes we just look into numbers which have only big prime dividers: $> p_k$.
-* But not to big, because very big primes are again already sieved with small primes. Since: if a composite number $N$ has a prime divider $\ge N / p_k$ than it has a prime divider $\le p_k$
+* But not too  big, because very big primes are again already sieved with small primes. Since: if a composite number $N$ has a prime divider $\ge N / p_k$ than it has a prime divider $\le p_k$
 
 ### Sub-Method: Large-any exponents (using Erathosthenes sieve)
 
