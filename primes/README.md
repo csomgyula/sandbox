@@ -32,7 +32,7 @@ $$
 
 And the right side converges to zero...
 
-### Sub-Method: Small-only exponents (combinatorial coding)
+### Sub-Method: Small-only exponents (using combinatorial coding)
 
 Outline:
 
@@ -48,4 +48,4 @@ where $\Pi(N, M)$ is the number of primes between N, M
 
 # Lower bound
 
-## Combinatorial, coding
+## Using combinatorial, coding
