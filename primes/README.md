@@ -20,6 +20,30 @@ Theorem: $\Pi(N) \le ~ N \* e^{-(1/p_1 + 1/p_2 + ... + 1/p_k) : p_1, p_2, ..., p
 
 ## Interval split estimation
 
+* This is a heuristic typically usable for estimatating aggregations (such as e.g. count, sum). Lets say we want a quick method to estimate the reciprocials:
+
+$$
+1/1 + 1/2 + 1/3 ... + 1/n
+$$
+
+We split the numbers into log N intervals 1, 2, 4, ..., 2^k where k = log n. We can quickly estime reciprocials within interval with their bounds. Hence we get:
+
+$$
+1/1 + 1/2 + 1/3 + 1/4 + 1/5 + 1/6 + 1/7 + ... + 1/n \le 1/1 + (1/2 + 1/2) + (1/4 + 1/4 + 1/4 + 1/4)
+$$
+
+And that we can simplify:
+
+$$
+1/1 + 1/2 + 1/3 + 1/4 + 1/5 + 1/6 + 1/7 + ... + 1/n \le 1/1 + 2 * 1/2 + 4 * 1/4 + ... ~= log N
+$$
+
+Similarly for lower bound:
+
+$$
+1/1 + 1/2 + 1/3 + 1/4 + 1/5 + 1/6 + 1/7 + ... + 1/n \ge 1/1 + 1/2 + (1/4 + 1/4) + (1/8 + 1/8 + 1/8 + 1/8) ~= 1 + 1/2 log N
+$$
+
 # Upper Bound (using problem split)
 
 ## Sub-Method: Sieve small-any primes (using Erathosthenes sieve)
