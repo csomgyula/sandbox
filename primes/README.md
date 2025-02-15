@@ -2,7 +2,11 @@
 
 ## Problem split
 
+* https://en.wikipedia.org/wiki/Divide-and-conquer_algorithm
+
 ## Eratosthenes sieve
+
+* https://en.wikipedia.org/wiki/Sieve_of_Eratosthenes
 
 Theorem: $Pi(N) \le RelativePrime(N,M)$
 
@@ -16,7 +20,7 @@ Theorem: $\Pi(N) \le ~ N \* e^{-(1/p_1 + 1/p_2 + ... + 1/p_k) : p_1, p_2, ..., p
 
 ## Interval split estimation
 
-# Upper Bound (using [problem split](https://en.wikipedia.org/wiki/Divide-and-conquer_algorithm))
+# Upper Bound (using problem split)
 
 ## Sub-Method: Sieve small-any primes (using Erathosthenes sieve)
 
