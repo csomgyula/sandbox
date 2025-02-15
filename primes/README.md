@@ -91,6 +91,6 @@ Instead of exponential we use faster
 - $2, 2\*3, 2\*3\*5, 2\*3\*5\*7, 2\*3\*5\*7$
 - goal: ow many primes between $[11, 2\*3\*5\*7]$ in order to approximate primes not greater than $2\*3\*5\*7\*11$
   - same as primes in $(7, 2\*3\*5\*7]$
-- explore: it can be that $7, 7 \* 2, 7 \* 2\*3, 7 \* 2\*3\*5$ behaves similarly as $2, 2\*3, 2\*3\*5, 2\*3\*5\*7$ ??? in what sense???
+- explore: it can be that $7, 7 \* 2, 7 \* 2\*3, 7 \* 2\*3\*5$ behaves similarly as $2, 2\*3, 2\*3\*5$ ??? in what sense???
 
 ## Using combinatorial, coding
