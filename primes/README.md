@@ -32,17 +32,18 @@ $$
 
 And the right side converges to zero...
 
-### Method: SubMethod: Small-only exponents
+### Sub-Method: Small-only exponents (combinatorial coding)
 
-We divide N into k intervals:
+Outline:
+
+* We divide N into k intervals: $N_1 < N_2 < ... < N_k$
+* Composite numbers have only dividers from these intervals. How much?
+* Only exponents of 1 are interesting, hence:
 
 $$
-N_1 < N_2 < ... < N_k
+\Pi(N_1, N_2) * Binom(N_k - N_1 : log N_1) + \Pi(N_2, N_3) * Binom(N_k - N_2 : log N_2) + ... 
 $$
 
+where $\Pi(N, M)$ is the number of primes between N, M
 
-# Lower bound
-
-# Level 1
-## Upper bound by sieves
-## Lower bound by coding
+# Lower bound (combinatorial, coding)
