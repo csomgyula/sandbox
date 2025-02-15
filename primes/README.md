@@ -1,20 +1,36 @@
-# Upper bound 
+# Method: Eratosthenes sieve
 
-## Relative prime sieve
+Theorem: $Pi(N) \le RelativePrime(N,M)$
 
-Method: $Pi(N) \le RelativePrime(N,M)$
+, where $RelativePrime(N, M)$ aka $EratosthenesSieve(N, M)$ is the number of numbers relative prime to all $m \le M$
 
-, where $RelativePrime(N, M)$ is the number of numbers relative prime to all m \le M
+Theorem: $\Pi(N) \le N \* (1-1/p_1) \* (1-1/p_2) \* ... \* (1 - 1/p_k) : p_1, p_2, ..., p_k <= M$
 
-Theorem: $Pi(N) \le N \* (1-1/p_1) \* (1-1/p_2) \* ... \* (1 - 1/p_k) : p_1, p_2, ..., p_k <= M$
+Theorem: $\Pi(N) \le ~ N \* e^{-(1/p_1 + 1/p_2 + ... + 1/p_k) : p_1, p_2, ..., p_k <= M}$
 
-Theorem: $Pi(N) \le ~ N \* e^{-(1/p_1 + 1/p_2 + ... + 1/p_k)} : p_1, p_2, ..., p_k <= M$
+# Sub-Method: Eratosthenes sieve small-any primes (aka relative primes)
 
-# Large exponents sieve
-The problem with the above is that the sieve can use only small numbers
+Use Eratosthenes sieve for small primes. 
 
+TODO: We need some formula for the reciprocals
 
-# Large primes
+# Sub-Method: Sieve large-only primes
+The problem with the above is that the sieve can only use small numbers. Now we look into large primes as well. Outline:
+
+* Since we already sieved small primes we just look into numbers which have only big prime dividers: $> p_k$.
+* But not to big, because very big primes are again already sieved with small primes. Since: if a composite number $N$ has a prime divider $\ge $N / p_k$ than it has a prime divider $\le p_k$
+
+## SubMethod: Large-any exponents
+
+Idea, large exponents cannot be frequent, for instance:
+
+$$
+N - (N / (x_1)^2 + N / (x_2)^2 +...+ N / (x_k)^2 : x_i > M) > N - (N/(M+1)^2 + N/(M+2)^2 + ... + N/(M+k)^2) 
+$$
+
+And the right side converges to zero...
+
+# Method: SubMethod: Small-only exponents
 
 We divide N into k intervals:
 
