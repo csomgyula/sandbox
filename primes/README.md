@@ -54,11 +54,10 @@ $$
 hence
 
 $$
-1/(p_1-1) + 1/(p_2-1) + ... + 1/(p_k-1) > ~loglog M
+1/(p_1-1) + 1/(p_2-1) + ... + 1/(p_k-1) > \~loglog M
 $$
 
-
-Theorem: $\Pi(N) \le ~ N / ~log p_k : p_1 * p_2 * ...* p_k <= M}$
+Theorem: $\Pi(N) \le ~ N / ~log p_k : p_1 * p_2 * ...* p_k <= M$
 
 ## Coding
 
