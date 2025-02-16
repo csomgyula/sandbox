@@ -12,9 +12,53 @@ Theorem: $Pi(N) \le RelativePrime(N,M)$
 
 , where $RelativePrime(N, M)$ aka $EratosthenesSieve(N, M)$ is the number of numbers relative prime to all $m \le M$
 
-Theorem: $\Pi(N) \le N \* (1-1/p_1) \* (1-1/p_2) \* ... \* (1 - 1/p_k) : p_1, p_2, ..., p_k <= M$
+Theorem: $\Pi(N) \le N \* (1-1/p_1) \* (1-1/p_2) \* ... \* (1 - 1/p_k) : p_1 * p_2 * ... * p_k <= N$
 
-Theorem: $\Pi(N) \le ~ N \* e^{-(1/p_1 + 1/p_2 + ... + 1/p_k) : p_1, p_2, ..., p_k <= M}$
+Theorem: $\Pi(N) \le ~ N / e^{1/p_1 + 1/p_2 + ... + 1/p_k : p_1 * p_2 * ...* p_k <= N}$
+
+
+$$
+(1+1/p_1+1/p_1^2 + ...) * (1+1/p_2+1/p_2^2 + ...) * ...* (1+1/p_k+1/p_2^k + ...)> 1+1/2+...+1/M: p_1, p_2, ..., p_k <= M
+$$
+
+hence
+
+$$
+1/(1-1/p-1) * 1/(1-1/p-2) * ...* 1/(1-1/p-k) > ~log M
+$$
+
+and since
+
+$$
+1/(1-1/x) = x / x-1 = 1 + 1/x-1
+$$
+
+hence
+
+$$
+(1 + 1/p_1-1) * (1 + 1/p_2-1) * ...* (1 + 1/p_k-1) > ~log M
+$$
+
+hence
+
+$$
+exp[log(1 + 1/p_1-1) + log(1 + 1/p_2-1) + ... + log(1 + 1/p_k-1)] > exp ~loglog M
+$$
+
+hence
+
+$$
+exp[1/(p_1-1) + 1/(p_2-1) + ... + 1/(p_k-1)] > exp ~loglog M
+$$
+
+hence
+
+$$
+1/(p_1-1) + 1/(p_2-1) + ... + 1/(p_k-1) > ~loglog M
+$$
+
+
+Theorem: $\Pi(N) \le ~ N / ~log p_k : p_1 * p_2 * ...* p_k <= M}$
 
 ## Coding
 
@@ -43,6 +87,8 @@ Similarly for lower bound:
 $$
 1/1 + 1/2 + 1/3 + 1/4 + 1/5 + 1/6 + 1/7 + ... + 1/n \ge 1/1 + 1/2 + (1/4 + 1/4) + (1/8 + 1/8 + 1/8 + 1/8) ~= 1 + 1/2 * log N
 $$
+
+
 
 # Upper Bound (using problem split)
 
@@ -83,3 +129,6 @@ $$
 where $\Pi(N, M)$ is the number of primes between N, M.
 
 # Lower bound
+
+# Split around $N^{1/2}$
+## Primes between $[1, log N]$ and $[N/loglog N]$
