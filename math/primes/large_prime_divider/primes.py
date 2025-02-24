@@ -1,16 +1,9 @@
 from math import sqrt 
-
-class Conf:
-    def __init__(self, stdout = False, debug = False):
-        self.stdout = stdout
-        self.debug = debug
-    
-    def __str__(self):
-        return f"conf: (stdout: {self.stdout}, debug: {self.debug})"
+from conf import Conf
     
 def primes(n, conf = Conf()):
     if conf.debug:
-        print(f"debug: started to compute primes <= {n}, with {conf} @primes()")
+        print(f"debug: started to compute primes < {n}, with {conf} @primes()")
     primes = EulerSieveMethod(n, conf)()
     if conf.stdout:
         print(primes)
@@ -171,8 +164,9 @@ class EulerSieveMethod:
         self.primes = primes
         return primes
 
-bound = 100
-from sys import argv        
-if len(argv) > 1:
-    bound = int(argv[1])
-primes(bound, Conf(stdout = True, debug = False))        
+if __name__ == "__main__":   
+    n = 100
+    from sys import argv        
+    if len(argv) > 1:
+        n = int(argv[1])
+    primes(n, Conf(stdout = True, debug = False))        
