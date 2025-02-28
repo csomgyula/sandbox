@@ -4,9 +4,9 @@
 
 ## Getting started
 
-```
-> python hello.py
-```
+1. `> pip install eel`
+2. copy files (hello.py, web folder)
+3. `> python hello.py`
 
 ## Remarks
 
