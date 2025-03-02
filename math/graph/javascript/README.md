@@ -17,6 +17,9 @@ simple
 - https://visjs.org/
 - https://medium.com/@thomasbrillion/%EF%B8%8F-fast-network-graph-using-javascript-%CC%80%E1%B4%97-%CC%81-92798460508d
 
+wasm
+- https://github.com/hpcc-systems/hpcc-js-wasm
+
 other	
 - https://dmitrybaranovskiy.github.io/raphael/
 - https://github.com/fabricjs/fabric.js
