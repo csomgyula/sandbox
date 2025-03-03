@@ -10,6 +10,6 @@ $$
 
 where 
 * $Q(M)$ is counting each number which is not greater than $M^2$ but its every prime divider is less than $M$
-* $~=$ means the egsact equoation depends on the integer part of $\sqrt N$, e.g. kinda +- epsilon.
+* $~=$ means kinda +- epsilon - the exact equoation depends on the integer part of $\sqrt N$
 
 Proof: Let $Q\*$ be the opposite of Q then double count $Q\*$.
