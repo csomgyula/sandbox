@@ -2,6 +2,6 @@ $$
 N = (\Pi(N)-\Pi(\sqrt N)) + (\Pi(N/2)-\Pi(\sqrt N)) + (\Pi(N/3)-\Pi(\sqrt N)) + ... + \Pi(1 + \sqrt N - \Pi(\sqrt N)) + Q(\sqrt N)
 $$
 
-Where $Q(M)$ is counting each numbers which is not greater than $M^2$ but its every prime divider is less than $M$
+Where $Q(M)$ is counting each number which is not greater than $M^2$ but its every prime divider is less than $M$
 
 Proof: Let $Q\*$ be the opposite of Q then double count $Q\*$.
