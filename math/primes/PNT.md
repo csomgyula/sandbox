@@ -12,4 +12,4 @@ where
 * $Q(M)$ is counting each number which is not greater than $M^2$ but its every prime divider is less than $M$
 * $\approx$ means kinda +- small remainder depending on the integer part of $\sqrt N$
 
-Proof: Let $Q\*$ be the opposite of Q then double count $Q\*$.
+Proof: Let $Q\*$ be the opposite of Q (numbers with prime divider above $\sqrt N$) then double count them using the large primes theay are divisible with.
