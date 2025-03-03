@@ -10,6 +10,6 @@ $$
 
 where 
 * $Q(M)$ is counting each number which is not greater than $M^2$ but its every prime divider is less than $M$
-* $\approx$ means kinda +- epsilon - the exact equoation depends on the integer part of $\sqrt N$
+* $\approx$ means kinda +- small remainder depending on the integer part of $\sqrt N$
 
 Proof: Let $Q\*$ be the opposite of Q then double count $Q\*$.
