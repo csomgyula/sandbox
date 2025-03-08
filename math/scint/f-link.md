@@ -1,13 +1,13 @@
 If there is such a mapping between $A$ and $B$ as
 
 $$
-A <-f-> B
+A \leftarrow f \rightarrow B
 $$
 
 or
 
 $$
-A -f-> B
+A - f \rightarrow B
 $$
 
 then such can be considered, if the link is materialized, as an extension to $A$ with $B$ through $f$ 
@@ -49,8 +49,8 @@ link? At first I see two cases:
  Note that the last is somewhat hints that links, mappings has at least two meanings: 
  - The computational meaning, when from $a ∈ A$, $b ∈ B$ can  be computed
  - The instance meaning, when from $b ∈ B$, $a ∈ A$ can be computed, but even though the opposite is not true, there is only one instance of $b$ representing $a$. So there is still a bidirectional mapping between $A$ and $B$ within context:
-    - $V  -model-> M$
-    - $M  -view_{view context} -> V$
+    - $V  - model \rightarrow M$
+    - $M  - view_{context} \rightarrow V$
     - constraint: $view( model(v), view_context(v) ) = v$
-    - this then creates a temporal binding $(M) <-binding-> (V)[T]$ which matehmatically is determined by the state of the view context of
-      every given time, and can be also cached (materialized in memory)
+    - this then creates a temporal binding $(M) \leftarrow binding[T] \rightarrow (V)$ which matehmatically is determined by the state of the
+      view context at every given point in time, and can be also cached (materialized in memory)
