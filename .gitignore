@@ -1,3 +1,2 @@
-Hello_Zig/startme.bat
-*/startme.bat
-it/Hello_Electron/node_modules/*
+**/startme.bat
+**/node_modules/*
