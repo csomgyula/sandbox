@@ -1,7 +1,15 @@
 $$
-N = (\Pi(N)-\Pi(\sqrt N)) + (\Pi(N/2)-\Pi(\sqrt N)) + (\Pi(N/3)-\Pi(\sqrt N)) + ... + \Pi(1 + \sqrt N - \Pi(\sqrt N)) + Q(\sqrt N)
+N \approx (\Pi(N)-\Pi(\sqrt N)) + (\Pi(N/2)-\Pi(\sqrt N)) + (\Pi(N/3)-\Pi(\sqrt N)) + ... + \Pi(1 + \sqrt N) - \Pi(\sqrt N)) + Q(\sqrt N)
 $$
 
-Where $Q(M)$ is counting each number which is not greater than $M^2$ but its every prime divider is less than $M$
+Or simplified:
 
-Proof: Let $Q\*$ be the opposite of Q then double count $Q\*$.
+$$
+N \approx \Pi(N) + \Pi(N/2) + \Pi(N/3) + ... + \Pi(1 + \sqrt N) - \sqrt N * \Pi(\sqrt N)) + Q(\sqrt N)
+$$
+
+where 
+* $Q(M)$ is counting each number which is not greater than $M^2$ but its every prime divider is less than $M$
+* $\approx$ means kinda +- small remainder depending on the integer part of $\sqrt N$
+
+Proof: Let $Q\*$ be the opposite of Q (numbers with prime divider above $\sqrt N$) then double count them using the large primes theay are divisible with.
