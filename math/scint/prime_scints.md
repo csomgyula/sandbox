@@ -117,3 +117,5 @@ P(3n, 2n) + P(3/2n, n) = n/4 + 3/2 * P(3/2n, n)\\
 P(3n, 2n)              = n/4 + 1/2 * P(3/2n, n)\\
 }
 $$
+
+ami nem lehet, mivel azt jelentené (a rekurzív adódó mértani sort összegezve), hogy $3n$ és $2n$ között $n/3$ prím van, ami nem lehet mert itt kb. $n/logm$ prím van, azaz valszeg egyre jobban nő a hányad, ahogy... jönnek be új prímek?
