@@ -65,5 +65,5 @@ Which suggests that view is just a context dependent computation of backend mode
 
 
 $$
-Reality\ (or \ abstraction)\ -\ model\ \rightarrow\ (Backend)\ Model -\ view_{context}\ \rightarrow\ View\ (Model)\ -\ see \rightarrow\ Seen\model -\ rightarrow\ Normalized\ model by\ brain
+Reality\ (or \ abstraction)\ -\ model\ \rightarrow\ (Backend)\ Model -\ view_{context}\ \rightarrow\ View\ (Model)\ -\ see \rightarrow\ Seen\ model\ - brain\ processing\ \rightarrow\ Normalized\ model\ by\ brain
 $$
