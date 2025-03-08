@@ -46,11 +46,24 @@ link? At first I see two cases:
    I do not count tabs, lists, outlines as seperate appereance). So in many case $f-link$ can be still bidirectional per UI session, though
    not mathematically computable, instead driven by the UI and the very fact that the UI representation is unique at every point in time.
 
- Note that the last is somewhat hints that links, mappings has at least two meanings: 
+Note that the last is somewhat hints that links, mappings has at least two meanings: 
  - The computational meaning, when from $a ∈ A$, $b ∈ B$ can  be computed
  - The instance meaning, when from $b ∈ B$, $a ∈ A$ can be computed, but even though the opposite is not true, there is only one instance of $b$ representing $a$. So there is still a bidirectional mapping between $A$ and $B$ within context:
-    - $V  - model \rightarrow M$
-    - $M  - view_{context} \rightarrow V$
+    - $View  - model \rightarrow Model$
+    - $Model  - view_{context} \rightarrow View$
     - constraint: $view( model(v), view_{context}(v) ) = v$
-    - this then creates a temporal binding $(M) \leftarrow binding[T] \rightarrow (V)$ which mathematically is determined by the state of the
+    - this then creates a temporal binding: $Model \leftarrow binding[T] \rightarrow View$ which mathematically is determined by the state of the
       view context at every given point in time, and can be also cached (materialized in memory)
+
+Also note that I do not think that Model is more a model then the UI. I consider both of them as models, Model as a backend model (and even that can be two: storage and computational model) and UI as frontend model. However they are both models of some reality or abstraction of reality. The difference is that the backend model is more abstract while the UI model is more rich, hence we cannot compute the view from the model in general, only within a given view context (such as style, scroll position etc.). That is two say UI is a model of reality through the backend model and a contextual view mapping. Schematically
+
+$$
+Reality\ (or \ abstraction)\ -\ model\ \rightarrow\ (Backend)\ Model -\ view_{context}\ \rightarrow\ View\ (Model)
+$$
+
+Which suggests that view is just a context dependent computation of backend model... except if the backend model is normalized, which can be many time the case (data normalization, software modularization) which case the view represents the model (as seen) by the user. Question is: does the human brain also normalize? How?
+
+
+$$
+Reality\ (or \ abstraction)\ -\ model\ \rightarrow\ (Backend)\ Model -\ view_{context}\ \rightarrow\ View\ (Model)\ -\ see \rightarrow\ Seen\model -\ rightarrow\ Normalized\ model by\ brain
+$$
