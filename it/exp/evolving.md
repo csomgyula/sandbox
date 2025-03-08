@@ -1,0 +1,6 @@
+- logic not aware of its physics
+  - pros: adaptive, can be ported to different physical machines  
+  - cons: does not conform to the environment-friendly requirement
+- program aware of both its physics
+  - pros: can be environment-friendly
+  - cons: not adaptive, since it depends on the machine
