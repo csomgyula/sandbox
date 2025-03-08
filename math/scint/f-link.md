@@ -67,4 +67,4 @@ $$
 Reality\ (or \ abstraction)\ -\ model\ \rightarrow\ (Backend)\ Model -\ view_{context}\ \rightarrow\ View\ (Model)\ -\ see \rightarrow\ Seen\ model\ - brain\ processing\ \rightarrow\ Normalized\ model\ by\ brain
 $$
 
-Now that NLP is a subject of computation, too, one may ask the related question: What is the relation between computing NLP, backend, frontend representations and human understanding?
+Now that NLP is a subject of computation, too, one may ask the related question: What is the relation between computing NLP, backend, frontend representations and human understanding? Or a thing which is more important for me, what is the role, utility, function of such representation? How can it help? Make life better?
