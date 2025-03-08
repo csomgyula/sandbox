@@ -63,7 +63,8 @@ $$
 
 Which suggests that view is just a context dependent computation of backend model... except if the backend model is normalized, which can be many time the case (data normalization, software modularization) which case the view represents the model (as seen) by the user. Question is: does the human brain also normalize? How?
 
-
 $$
 Reality\ (or \ abstraction)\ -\ model\ \rightarrow\ (Backend)\ Model -\ view_{context}\ \rightarrow\ View\ (Model)\ -\ see \rightarrow\ Seen\ model\ - brain\ processing\ \rightarrow\ Normalized\ model\ by\ brain
 $$
+
+Now that NLP is a subject of computation, too, one may ask the related question: What is the relation between computing NLP, backend, frontend representations and human understanding?
