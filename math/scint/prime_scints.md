@@ -122,3 +122,18 @@ P(3n, 2n)              = n/4 + 1/2 * P(3/2n, n)\\
 $$
 
 ami nem lehet, mivel azt jelentené (a rekurzív adódó mértani sort összegezve), hogy $3n$ és $2n$ között $n/3$ prím van, ami nem lehet mert itt kb. $n/logn$ prím van, azaz valszeg egyre jobban nő a hányad, ahogy... jönnek be új prímek?
+
+Sejtés: Össszetett számok $n$-ig $Q(n)$ plusz a gyök n alatti prímek annyi, mint az összetett számok útjának, $path(i)$ összege $n/2$ és $n$ között. Egy összetett szám útja ahány féle kombinációja van a primtényezős felírásának, megszorítva arra, hogy két szomszédos prím eltérő kell legyen. Pl. 
+
+$$
+path(12) = |[ 4 * 3, 2 * 3 * 2, 3 * 4 ]| = 3
+$$
+
+Vázlatos bizonyítás: 
+
+- először megszámolom az összetett számokat aszerint, hogy mi a legkisebb prímosztó: $prime(p_i, n) = | {p_i}^{k_i} * {p_{i+1}}^{k_{i+1}} * ... * {p_{i+j}}^{k_{i+j}} \leq n \land \forall j:\ p_{i+j} \leq \sqrt n |$
+- sejtés: $prime(p_{i+1}, n) = prime(p_i, n / (p_{i+1} / p_i))$
+- 2D Knapsack: az első dimenzió az n, a második, hogy mekkora a legkisebb prímosztója p, a Knapscak az, hogy hány olyan szám van n-ig, aminek a legkisebb primosztója legalább p
+- sejtés: végigkövetem az utat a Knapsacken, amíg eljut 1-be, minden út egy összetett szám patha
+
+A Csebiseb tételhez azt kell megbecsülni, hogy milyen gyakori olyan szám, aminek kicsi a path-a
