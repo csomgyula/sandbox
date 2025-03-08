@@ -51,6 +51,6 @@ link? At first I see two cases:
  - The instance meaning, when from $b ∈ B$, $a ∈ A$ can be computed, but even though the opposite is not true, there is only one instance of $b$ representing $a$. So there is still a bidirectional mapping between $A$ and $B$ within context:
     - $V  - model \rightarrow M$
     - $M  - view_{context} \rightarrow V$
-    - constraint: $view( model(v), view_context(v) ) = v$
-    - this then creates a temporal binding $(M) \leftarrow binding[T] \rightarrow (V)$ which matehmatically is determined by the state of the
+    - constraint: $view( model(v), view_{context}(v) ) = v$
+    - this then creates a temporal binding $(M) \leftarrow binding[T] \rightarrow (V)$ which mathematically is determined by the state of the
       view context at every given point in time, and can be also cached (materialized in memory)
