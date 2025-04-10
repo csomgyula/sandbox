@@ -44,3 +44,10 @@
 - everything that is			
 	- service = runnable functions, accessible data
 	- running function = has a goal		
+	
+> Every time you make a function call in Zig, an amount of space in the stack is reserved for this particular function call (Chen and Guo 2022; Zig Software Foundation 2024). The value of each function argument given to the function in this function call is stored in this stack space. Also, every local object that you declare inside the function scope is usually stored in this same stack space.
+> [..]	
+> Virtually any application that behaves as a server is a classic use case of the heap. A HTTP server, a SSH server, a DNS server, a LSP server, … any type of server. In summary, a server is a type of application that runs for long periods of time, and that serves (or “deals with”) any incoming request that reaches this particular server.	
+
+https://pedropark99.github.io/zig-book/Chapters/01-memory.html
+https://courses.grainger.illinois.edu/cs225/fa2022/resources/stack-heap/
