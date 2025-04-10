@@ -57,17 +57,17 @@ https://courses.grainger.illinois.edu/cs225/fa2022/resources/stack-heap/
 every memory item is like this:
 
 ```
-(address, type, id, version, timestamp, value)
+(address, value, type, id, version, timestamp)
 ```
 
 where:
 
-- address is the memory address
-- type is the type of the item (data, function, whatever)
-- id is logical unique id of the object (which never changes, even if it is relocated or even if it is historical)
-- version is the counter how much time the item changed, if ever
-- timestap when the item in its current state was created or updated
-- the actual value of the item
+- `address` is the memory address of the item  (data, function, whatever)
+- `value` is the actual value of the item in this `version`, since `timestamp`
+- `type` is the type of the item
+- `id` is logical unique id of the object (which never changes, even if it is relocated or even if it is historical)
+- `version` is the counter how much time the item changed, if ever
+- `timestap` when the item in its current state was created or updated
 
 question:
 
