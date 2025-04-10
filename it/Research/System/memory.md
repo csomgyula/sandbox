@@ -51,3 +51,24 @@
 
 https://pedropark99.github.io/zig-book/Chapters/01-memory.html
 https://courses.grainger.illinois.edu/cs225/fa2022/resources/stack-heap/
+
+## research
+
+every memory item is like this:
+
+```
+(address, type, id, version, timestamp, value)
+```
+
+where:
+
+- address is the memory address
+- type is the type of the item (data, function, whatever)
+- id is logical unique id of the object (which never changes, even if it is relocated or even if it is historical)
+- version is the counter how much time the item changed, if Every
+- timestap when the item in its current state was created or updated
+- the actual value of the item
+
+question:
+
+- we also need a flag whether the item is online or archive?
