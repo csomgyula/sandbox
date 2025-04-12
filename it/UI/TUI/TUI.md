@@ -1,0 +1,16 @@
+- Python
+	- https://www.reddit.com/r/Python/comments/16z4kjd/best_python_libraries_for_tui_development/
+	- https://dev.to/lazy_code/5-best-python-tui-libraries-for-building-text-based-user-interfaces-5fdi
+	- https://github.com/bczsalba/pytermgui
+	- https://github.com/Textualize/textual
+		- https://www.textualize.io/blog/7-things-ive-learned-building-a-modern-tui-framework/
+			- https://monodraw.helftone.com/
+		- https://realpython.com/python-textual/
+		- https://github.com/Textualize/rich
+	https://github.com/peterbrittain/asciimatics	
+	- https://github.com/ceccopierangiolieugenio/pyTermTk	
+- Zig
+	- https://github.com/rockorager/libvaxis
+	- https://sr.ht/~leon_plickat/zig-spoon/
+		- https://zig.news/lhp/want-to-create-a-tui-application-the-basics-of-uncooked-terminal-io-17gm
+		- https://zig.news/lhp/easily-create-tui-programs-with-zig-spoon-project-demonstration-4k33
