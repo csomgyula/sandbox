@@ -77,9 +77,9 @@ problem:
 			- below 1s the server may have nothing to send.
 	- problem:
 		- even `4-10s` can be much in a monitoring app such as vasmegyer, which polls every 2 secs and sends large volume of datan, a better one is:	
-		```
-		wsurl --listen --till 10s --messages 2 wss://... > out.txt
-		```
+			```
+			wsurl --listen --till 10s --messages 2 wss://... > out.txt
+			```  
 			- and `messages` has `1` as default
 			- question: 
 				- such a bounded form of listen may well receive a name which better fits it, such as receive that is: would not it be better to call it `receive`
