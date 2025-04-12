@@ -1,0 +1,56 @@
+application websocket:
+	automata: #runs at machine.automata		
+		reaction connect address: TODO
+		
+		memory address
+		
+		rule address != null: # rule is pushed down to sources (ui, net)
+			memory contents: content*
+				content: ((in|out) text ~text_pattern)*
+				
+			reaction send content: ui.automata -> . -> to net, contents
+			reaction receive content: net -> . -> out to ui.automata
+		
+		quit: TODO
+								
+	net: #runs at machine.net	
+		reaction send: automata -> . -> machine.net
+		reaction receive: machine.net -> . -> out to automata
+			
+	ui: # runs at machine.ui
+		automata: # runs at machine.ui.automata, can be the same as machine.automata or different
+			reaction submit text:
+				prompt -> .
+				. -> out to ../automata switch(text)(connect | send | quit)
+				. -> out to contents switch(text)(send)
+				
+			reaction receive content: ../automata -> . -> contents
+			
+		layout top down
+		
+		block address: TODO
+		
+		block contents:
+			block contents: 
+				flag cached
+				
+				memory contents # can be bound to automata.contents or can cache depending on machine
+				
+				layout top down
+				
+				block content*
+				
+				reaction add content: [send, receive] -> 
+					rule cached:
+						. -> contents
+					. -> machine.ui # refresh display
+				
+			reaction [send, receive] content: automata -> . -> add
+				
+		block prompt: # like in chatgpt we use a separate prompt from content display
+			block text: 
+				reaction edit text: user -> machine.ui -> . -> machine.ui -> user
+				
+			block submit:
+				reaction submit: user -> machine.ui -> . -> automata
+			
