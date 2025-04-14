@@ -80,7 +80,6 @@ https://en.wikipedia.org/wiki/Comparison_of_source-code-hosting_facilities
   - https://about.gitea.com/
   -  (formerly https://gogs.io/)
 - https://sr.ht/
-- https://pagure.io/
 - https://en.wikipedia.org/wiki/GitLab
 
 ### Software
