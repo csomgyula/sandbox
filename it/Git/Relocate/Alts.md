@@ -17,7 +17,7 @@
 
 ## Prototype
 
-- Main: token-based Pull, directly from repo (`r`) to mirror (`m`)
+- Main: token-based Pull, directly from repo (`r`) to mirror (`m`)  
 	  `pull from r to m`
 - Secondary: edge mirror (`em`) + some deep mirror (`dm`)
 	- Action based push:  
