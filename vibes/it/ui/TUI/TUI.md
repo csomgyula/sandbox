@@ -14,3 +14,4 @@
 	- https://sr.ht/~leon_plickat/zig-spoon/
 		- https://zig.news/lhp/want-to-create-a-tui-application-the-basics-of-uncooked-terminal-io-17gm
 		- https://zig.news/lhp/easily-create-tui-programs-with-zig-spoon-project-demonstration-4k33
+- Ruby		
