@@ -1,7 +1,12 @@
 # Git relocate
 
-## Mirror
+## Archive
 
+- https://git-scm.com/docs/git-archive
+- https://www.specbee.com/blogs/how-create-and-apply-patch-git-diff-and-git-apply-commands-your-drupal-website
+
+
+## Mirror
 - https://www.google.com/search?q=Git+mirror
 - https://www.reddit.com/r/git/comments/seu9pe/is_there_a_way_to_consistently_mirror_one_repo_to/
 - https://visofthu.atlassian.net/wiki/spaces/ewiser/pages/549453825/Git+mirror
@@ -9,6 +14,7 @@
 - https://aaronsaray.com/2021/mirror-git-repository/
 - https://graphite.dev/guides/git-clone-bare-mirror
 - https://medium.com/@paul.pietzko/mirroring-a-github-repository-keep-your-fork-updated-automatically-3dcc199b647c
+
 
 ## Libraries
 
@@ -43,6 +49,9 @@
 	- https://stackoverflow.com/questions/13532389/git-library-for-go
 	- https://www.reddit.com/r/rust/comments/1gshlja/how_to_use_git_in_a_rust_application/
 		
+## Security
+
+- https://stackoverflow.com/questions/1662205/how-to-make-a-git-repository-read-only
   
 ## Forge
 
@@ -71,6 +80,7 @@ https://en.wikipedia.org/wiki/Comparison_of_source-code-hosting_facilities
   - https://about.gitea.com/
   -  (formerly https://gogs.io/)
 - https://sr.ht/
+- https://pagure.io/
 - https://en.wikipedia.org/wiki/GitLab
 
 ### Software
