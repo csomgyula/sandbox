@@ -15,8 +15,6 @@
 |ssh-key-based Pull  | Yes      | Not      | Yes       | Yes          | Read write access            |
 |token-based Pull    | Yes      | Yes      | Medium    | Medium       | New tech, Manual refresh     |
 
-## Prototype
-
 - Main: 
     - token-based Pull: directly from repo (`r`) to mirror (`m`)  
 	  `pull from r to m`
@@ -25,3 +23,4 @@
 	  `-                , push from r to em , pull from em to dm`
 	- PC-based hybrid:  
 	  `pull from r to pc, push from pc to em, pull from em to dm`
+- Problem is: basic Git hosting does not (may not) provide automatic Pull
