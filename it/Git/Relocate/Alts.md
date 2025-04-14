@@ -17,9 +17,9 @@
 
 ## Prototype
 
-- Main: Token-based Pull
-- Secondary: one main mirror + some slave mirror
-	- PC-based hybrid:  
-	  `pull from m, push to mm, pull from mm to sm`
+- Main: token-based Pull
+- Secondary: edge mirror (`em`) + some deep mirror (`dm`)
 	- Action based push:  
-	  `-          , push to mm, pull from mm to sm`
+	  `-          , push to em, pull from em to dm`
+	- PC-based hybrid:  
+	  `pull from m, push to em, pull from em to dm`
