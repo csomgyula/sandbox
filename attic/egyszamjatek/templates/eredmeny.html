@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Egyszám Játék - Eredmény</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #2f2f2f;
+            color: #fff;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h1, h2, h3 {
+            color: #f2f2f2;
+        }
+
+        .container {
+            margin: auto;
+            width: 70%;
+            padding: 20px;
+            background-color: #3c3c3c;
+            border-radius: 8px;
+        }
+
+        .summary {
+            margin-top: 20px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            padding: 8px;
+            text-align: center;
+            border: 1px solid #444;
+        }
+
+        th {
+            background-color: #5c5c5c;
+        }
+
+        tr:nth-child(even) {
+            background-color: #444;
+        }
+
+        .result {
+            font-weight: bold;
+        }
+
+        .trng-info {
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Egyszám Játék - Eredmény</h1>
+    <p><strong>Körök száma:</strong> {{ korok_szama }}</p>
+    <p><strong>TRNG: </strong>{{ trng_name }}</p>
+
+    <h2>Játékosok:</h2>
+    <ul>
+        {% for player in player_names %}
+            <li>{{ player }}</li>
+        {% endfor %}
+    </ul>
+
+    <div class="summary">
+        <h3>Játék eredmények:</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Kör</th>
+                    <th>Játékos</th>
+                    <th>Játékos száma</th>
+                    <th>TRNG számok</th>
+                    <th>Eredmény</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for kor_eredmeny in eredmenyek %}
+                    {% for jatekos_eredmeny in kor_eredmeny %}
+                        <tr>
+                            <td>{{ jatekos_eredmeny.kor }}</td>
+                            <td>{{ jatekos_eredmeny.jatekos }}</td>
+                            <td>{{ jatekos_eredmeny.jatekos_szam }}</td>
+                            <td>{{ jatekos_eredmeny.trng_szam }}</td>
+                            <td class="result">{{ jatekos_eredmeny.kulonbseg }}</td>
+                        </tr>
+                    {% endfor %}
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+
+    <div class="trng-info">
+        <h3>Végső Eredmény:</h3>
+        <p><strong>Győztes:</strong> {{ vegso_eredmeny['nyertes'] }}</p>
+        <p><strong>Különbség:</strong> {{ vegso_eredmeny['kulonbseg'] }}</p>
+    </div>
+    <a href="/">
+        <button class="gomb">Vissza a főoldalra</button>
+    </a>
+</div>
+</body>
+</html>

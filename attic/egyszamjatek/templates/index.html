@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <title>Egyszámjáték</title>
+    <style>
+        body {
+            background-color: #121212;
+            color: #f0f0f0;
+            font-family: Arial, sans-serif;
+            padding: 2rem;
+        }
+        h1, h2 {
+            color: #ffffff;
+        }
+        form {
+            margin-bottom: 2rem;
+        }
+        input, select, button {
+            margin-top: 0.5rem;
+            padding: 0.5rem;
+            background-color: #333;
+            color: #f0f0f0;
+            border: 1px solid #555;
+        }
+        button:hover {
+            background-color: #444;
+        }
+        .section {
+            margin-bottom: 3rem;
+        }
+    </style>
+</head>
+<body>
+    <h1>Egyszámjáték</h1>
+
+    <div class="section">
+        <h2>Robot feltöltése</h2>
+        <form action="/upload_player" method="post" enctype="multipart/form-data">
+            <input type="file" name="player_file" required>
+            <button type="submit">Feltöltés</button>
+        </form>
+    </div>
+
+    <div class="section">
+        <h2>TRNG feltöltése</h2>
+        <form action="/upload_trng" method="post" enctype="multipart/form-data">
+            <input type="file" name="trng_file" required>
+            <button type="submit">Feltöltés</button>
+        </form>
+    </div>
+
+    <div class="section">
+        <h2>Játék indítása</h2>
+        <form action="/play" method="post">
+            <label for="korok">Körök száma:</label><br>
+            <input type="number" id="korok" name="korok" min="1" required><br><br>
+
+            <label for="trng_name">Válassz TRNG-t:</label><br>
+            <select id="trng_name" name="trng_name" required>
+                {% for trng in trngs %}
+                    <option value="{{ trng }}">{{ trng }}</option>
+                {% endfor %}
+            </select><br><br>
+
+            <button type="submit">Játék indítása</button>
+        </form>
+    </div>
+
+    <div class="section">
+        <h2>Feltöltött Robotok</h2>
+        <ul>
+            {% for player in players %}
+                <li>{{ player }}</li>
+            {% endfor %}
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>Feltöltött TRNG-k</h2>
+        <ul>
+            {% for trng in trngs %}
+                <li>{{ trng }}</li>
+            {% endfor %}
+        </ul>
+    </div>
+</body>
+</html>

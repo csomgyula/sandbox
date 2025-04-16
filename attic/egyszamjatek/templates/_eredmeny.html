@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <title>Játék eredmény</title>
+    <style>
+        body {
+            background-color: #121212;
+            color: #ffffff;
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+        h1, h2, h3 {
+            color: #ffffff;
+        }
+        .jatek {
+            border: 1px solid #444;
+            padding: 10px;
+            margin-bottom: 20px;
+        }
+        .gomb {
+            background-color: #333;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+        .gomb:hover {
+            background-color: #555;
+        }
+    </style>
+</head>
+<body>
+    <h1>Játék eredmény</h1>
+
+    <h2>Körök száma: {{ korok_szama }}</h2>
+    <h2>TRNG: {{ trng_name }}</h2>
+
+    <h3>Játékosok:</h3>
+    <ul>
+        {% for nev in player_names %}
+        <li>{{ nev }}</li>
+        {% endfor %}
+    </ul>
+
+    <h3>Körönkénti eredmények:</h3>
+    {% for i in range(korok_szama) %}
+    <div class="jatek">
+        <strong>{{ i+1 }}. kör:</strong><br>
+        {% for j, eredmeny in enumerate(jatekok) %}
+            <strong>{{ player_names[j] }}</strong>: {{ eredmeny[i] }}<br>
+        {% endfor %}
+    </div>
+    {% endfor %}
+
+    <h3>Összesített eredmény:</h3>
+    <ul>
+        {% for nev, osszpont in osszesites.items() %}
+        <li><strong>{{ nev }}</strong>: {{ osszpont }} pont
+            {% if osszpont > (korok_szama // 2) %}
+                - Játékos nyert
+            {% elif osszpont < (korok_szama // 2) %}
+                - TRNG nyert
+            {% else %}
+                - Döntetlen
+            {% endif %}
+        </li>
+        {% endfor %}
+    </ul>
+
+    <a href="/">
+        <button class="gomb">Vissza a főoldalra</button>
+    </a>
+</body>
+</html>
