@@ -29,8 +29,8 @@ hence:
 6. loop, in each round calculate the next bias and transform:
    1. take the next row, `row` from the samples
    2. calculate the bias if it remains unchanged: $original = {bias: bias + S[next], transform: id}$
-   3. calculate the bias if it is mirrored: $negated = {bias: bias + mirror S[next]$, transform: negate}$
-   4. take the one which is less biased: $bias, yield (row, transform) <- less_biased(original, negated)$
+   3. calculate the bias if it is mirrored:       $mirror =  {bias: bias + mirror S[next], transform: mirror}$
+   4. take the one which is less biased: $bias, yield (row, transform) <- less_biased(original, mirror)$
 
 ## diffusion
 
