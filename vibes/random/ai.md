@@ -42,4 +42,4 @@ opposite of bias
 
 ## classification
 
-opposite of bias
+opposite of bias: here we do not generate noise (less structure) from structure, but more structure from structure
