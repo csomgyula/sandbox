@@ -34,7 +34,7 @@ hence:
 
 ## diffusion
 
-same as unbis
+same_as/similar_to unbias
 
 ## unique count
 
