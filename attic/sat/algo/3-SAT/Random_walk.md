@@ -26,6 +26,12 @@ Minden érték, $x$ (lánc, $xyz...$) bolyong az implikációs gráfon a követk
 	  először ott járt (elkéri tőle az infókat), de nem olvad össze vele, mivel a két lánc az eredetében
 	  eltér, emiatt a körképzésben eltérőek lehetnek
 
+- Eredmény
+	- miután minden lánc megállt, minden láncra megnézi a súlyokat 
+	- konkrétan az x - y előfordulásokat súlyozza
+	- azt próbálja meghatározni, hogy x és y azonos paritású-e vagy sem
+	- ahol nagy az együttállás (súly) ott kapcsol össze változókat
+
 ## Implikációs gráf
 
 Implikációs gráf leegyszerűsítve klauzurák és közötti implikációk:
