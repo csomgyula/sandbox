@@ -22,11 +22,11 @@ Hence:
 solutions can be also represented with `01_` patterns  
 samples:
 
-| solutiion            | word            |
-|----------------------|-----------------|
-| $ x1 True, x2 False$ | `solution 10__` |
-| $ x1 False x2 True$  | `solution 01__` |
-| $ x3 True  x4 False$ | `solution __10` |
+| solution            | word            |
+|---------------------|-----------------|
+| $x1 True, x2 False$ | `solution 10__` |
+| $x1 False x2 True$  | `solution 01__` |
+| $x3 True  x4 False$ | `solution __10` |
 
 Hence:
 
@@ -36,7 +36,7 @@ Hence:
 
 ## match
 
-representing clauses and solutions with words, satisfaction can be mapped to a pattern matching problem,
+representiing clauses and solutions with words, satisfaction can be mapped to a pattern matching problem,
 put simply a solution solves a problem if it matches all its clauses
 
 where matches defined for letters and words as follows:
