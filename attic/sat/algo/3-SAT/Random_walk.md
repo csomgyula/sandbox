@@ -30,18 +30,18 @@ Implikációs gráf leegyszerűsítve klauzurák és közötti implikációk:
 $3-SAT \implies 2-SAT$ implikációk:
 
 $$
-(cl x \lor idpart_x) and (cl \lnot x \lor negpart_x) \implies 
-(var x \and negpart_x) \lor (var \not x \land cl idpart_x)
+(cl \ x \lor idpart_x) and (cl \ \lnot x \lor negpart_x) \implies 
+(var \ x \and negpart_x) \lor (var \ \not x \land cl \ idpart_x)
 $$
 
 $2-SAT \implies 2-SAT$ implikációk:
 
 $$
-(cl x \lor y) \implies 
+(cl \ x \lor y) \implies 
 (
-	(var \lnot x \implies (part_x \land (y \implies negpart_y))) 
+	(var \ \lnot x \implies (idpart_x \land (y \implies negpart_y))) 
 	\land
-	(var \lnot y \implies (part_y \land (x \implies negpart_x)))
+	(var \ \lnot y \implies (idpart_y \land (x \implies negpart_x)))
 )
 $$
 
