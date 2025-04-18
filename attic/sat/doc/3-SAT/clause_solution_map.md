@@ -24,9 +24,9 @@ samples:
 
 | solution                   | word            |
 |----------------------------|-----------------|
-| $x1 \ True,  \ x2 \ False$ | `solution 10__` |
-| $x1 \ False, \ x2 \ True$  | `solution 01__` |
-| $x3 \ True,  \ x4 \ False$ | `solution __10` |
+| $x1=True,  \ x2 \ False$ | `solution 10__` |
+| $x1=False, \ x2 \ True$  | `solution 01__` |
+| $x3=True,  \ x4 \ False$ | `solution __10` |
 
 Hence:
 
