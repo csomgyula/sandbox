@@ -1,62 +1,62 @@
 """
-Samples 
+This module implements a $Sat \ N \ I1$ 3-SAT sample generator. 
 
-1. which are satisfiable and
+A $Sat \ N \ I1$ sample is such that:
+
+1. it is satisfiable ($Sat$) and
 2. where
-   1. every variable appears in both form (id, negate)
-   2. every 2 clauses has at most 1 shared variable
+   1. every variable appears in both form: identical and negated ($N$)
+   2. every 2 clauses has at most 1 shared variable, their intersection is at most one ($I1$)
 3. which are not expandable without unsatisfying conditions 1. 2.
 """
 from enum import Enum
 class VariableForm(Enum):
     """
-    Role: Represents the forms(s) as the variable already apperared in clauses
-    
-    Possible values:
-    - `NONE` - no appereance yet
-    - `ID` - appeared in its identical form, e.g. $x_1$ in $(x_1 \lor ...)$
-    - `NEG` - appeared in its negated form, e.g.  $x_1$ in $(\lnot x_1 \lor ...)$
+    Role: Represents the variable forms(s) already apperared in clauses, can be one of:
+    - `NONE` - variable did not appear in any clause
+    - `IDENTICAL` - appeared in its identical form, e.g. $x_1$ in $(x_1 \lor ...)$
+    - `NEGATED` - appeared in its negated form, e.g.  $x_1$ in $(\lnot x_1 \lor ...)$
     - `BOTH` - appeared in both form
         
     >>> print(VariableForm.NONE)
-    VariableForm.NONE
+    NONE
 
-    >>> print(VariableForm.ID)
-    VariableForm.ID
+    >>> print(VariableForm.IDENTICAL)
+    IDENTICAL
 
-    >>> print(VariableForm.NEG)
-    VariableForm.NEG
+    >>> print(VariableForm.NEGATED)
+    NEGATED
     
     >>> print(VariableForm.BOTH)
-    VariableForm.BOTH
+    BOTH
     
     Operations:
     - `__add__(new_form)`: adds a new form to the existing one:  
         
         First appearence:       
-        >>> print(VariableForm.NONE + VariableForm.ID)
-        VariableForm.ID
+        >>> print(VariableForm.NONE + VariableForm.IDENTICAL)
+        IDENTICAL
 
-        >>> print(VariableForm.NONE + VariableForm.NEG)
-        VariableForm.NEG
+        >>> print(VariableForm.NONE + VariableForm.NEGATED)
+        NEGATED
         
         Second appereance:
-        >>> print(VariableForm.ID + VariableForm.ID)
-        VariableForm.ID
+        >>> print(VariableForm.IDENTICAL + VariableForm.IDENTICAL)
+        IDENTICAL
 
-        >>> print(VariableForm.NEG + VariableForm.NEG)
-        VariableForm.NEG
+        >>> print(VariableForm.NEGATED + VariableForm.NEGATED)
+        NEGATED
     
         Both appereance:
-        >>> print(VariableForm.ID + VariableForm.NEG)
-        VariableForm.BOTH
+        >>> print(VariableForm.IDENTICAL + VariableForm.NEGATED)
+        BOTH
 
-        >>> print(VariableForm.NEG + VariableForm.ID)
-        VariableForm.BOTH
+        >>> print(VariableForm.NEGATED + VariableForm.IDENTICAL)
+        BOTH
     """
     NONE = 0
-    ID = 1
-    NEG = 2
+    IDENTICAL = 1
+    NEGATED = 2
     BOTH = 3
     
     def __add__(self, new_form):
@@ -64,8 +64,8 @@ class VariableForm(Enum):
         Adds a new form to the existing one
         
         - Form value is interpreted as a bitmap, where
-            - index 0 shows whether it appeared in ID form
-            - index 1 shows whether it appeared in NEG form
+            - index 0 shows whether it appeared in `IDENTICAL` form
+            - index 1 shows whether it appeared in `NEGATED` form
         - Hence:
             - 0/00 - no appereance yet
             - 1/10 - appeared in its identical form
@@ -75,52 +75,117 @@ class VariableForm(Enum):
         """
         return VariableForm(self.value | new_form.value)
     
+    def __str__(self):
+        return f"{self.name}"
+        
 class Variable:
     """
     Role: Memorize variable related data:
-    - in what form it already appeared (`NONE`, `ID`, `NEG`, `BOTH`)
+    - in what form it already appeared (`NONE`, `IDENTICAL`, `NEGATED`, `BOTH`)
     - the available pairs it can appear
     
     Attributes:
-    - form: the form(s) already appeared
-    - available_pairs: the variable pairs it can appear without contradicting condition 2.2. 
-      every 2 clauses has at most 1 shared variable
+    - `appearance`: the variable form(s) already appeared in clauses
+    - `available_pairs`: the variable pairs it can appear without contradicting condition 2.2. 
+      (every 2 clauses has at most 1 shared variable)
     
     Operations: 
-    - __init__(i): initialize the variable with 
-        - form = NONE
-        - available_pairs = None
-    - add_available_pair
-    - remove_available_pair
+    - `__init__(id)`: initialize the variable 
     
     Usage:
-    - SatNI1.__init__ -> add_available_pair: available_pairs will be initialized when variable 
+    - SatNI1.__init__ -> 
+        - `available_pairs.add`: available_pairs will be initialized when variable 
       pairs are initialized
-    - SatNI1.??? -> remove_available_pair: called after a clause is generated hence its variable 
-      pairs are not available any more
+    - SatNI1.??? -> after a clause is generated
+        - `appearance + new_form`: add the new form according to the clause 
+        - `available_pairs.remove`: remove pairs from clause not available any more
     """
     
-    def __init__(self):
+    def __init__(self, id):
         """
-        >>> v = Variable()
-        >>> print(v.form)
-        VariableForm.NONE
-        >>> print(v.available_pairs)
-        []
-        """
-        self.form = VariableForm.NONE
-        self.available_pairs = []
-        
-    def add_available_pair(pair):
-        pass
+        initialize the variable 
+        - `id = id`
+        - `appearance = NONE`
+        - `available_pairs = {}`
     
-    def remove_available_pair(pair):
-        pass
+        >>> v = Variable(1)
+        >>> print(v.id)
+        1
+        >>> print(v.appearance)
+        NONE
+        >>> print(v.available_pairs)
+        {}
+        >>> print(v)
+        var_1 appearance NONE
+        """
+        self.id = id
+        self.appearance = VariableForm.NONE
+        self.available_pairs = {}
+        
+    def __str__(self):
+        return f"var_{self.id} appearance {self.appearance}"
     
 class VariablePair:
-    pass
+    """
+    Role: Memorize available pairs which can be used for clauses
+    
+    Attributes:
+    - `source`: variable pairs are directed, this is the source in the pair
+    - `target`: this is the target in the pair
+    - `available_siblings`: the sibling pairs which can be used to make 3-SAT clause without 
+      contradicting condition 2.2. (every 2 clauses has at most 1 shared variable)
+    
+    Operations: 
+    - `__init__(source, target)`: initialize the variable 
+    
+    Usage:
+    - SatNI1.__init__ -> 
+        - `__init__`: all pairs created during initialization  
+          note this is when the pair is also added to the variable as available
+        - `available_siblings.add`: siblings will be initialized during initialization
+    - SatNI1.??? -> after a clause is generated
+        - `available_siblings.remove`: remove siblings (part of the clause) not available any more  
+          note that once a pair does not have any siblings it will be removed from the source variable
+    """
+    
+    def __init__(self, source, target):
+        """
+        initialize the variable pair
+        - `source = source`
+        - `target = target`
+        - `available_siblings = {}`
 
-class SatNI1:
+        >>> vp = VariablePair(Variable(1), Variable(2))
+        >>> print(vp.source)
+        var_1 appearance NONE
+        >>> print(vp.target)
+        var_2 appearance NONE
+        >>> print(vp.available_siblings)
+        {}
+        >>> print(vp)
+        var_1 appearance NONE -> var_2 appearance NONE
+        """
+        self.source = source
+        self.target = target
+        self.available_siblings = {}
+        
+    def __str__(self):
+        return f"{self.source} -> {self.target}"
+
+class Clause3:
+    """
+    Role: Represents a clause with 3 variables
+    
+    Samples: 
+    
+    - $var_1 \lor var_2 \lor var_3$
+    - $var_1 \lor var_2 \lor \lnot var_4$
+    """
+    
+class SatNI1Sample:
+    pass
+    
+class SampleGenerator:
     pass
     
 class Obfuscator:
