@@ -2,14 +2,14 @@
 
 ### clause
 
-clauses can be represented with `01_` patterns  
+clauses can be represented with `01_` patterns (words maded from letters `0 1 _`  
 samples:
 
-| clause                  | word          |
-|-------------------------|---------------|
-| $ x1 \lor  x2 \lor x3$  | `clause 111_` |
-| $~x1 \lor ~x2 \lor x3$  | `clause 001_` |
-| $ x1 \lor  x2 \lor ~x4$ | `clause 11_0` |
+| clause                            | word          |
+|-----------------------------------|---------------|
+| $x1 \lor x2 \lor x3$              | `clause 111_` |
+| $\lnot x1 \lor \lnot x2 \lor x3$  | `clause 001_` |
+| $x1 \lor  x2 \lor \lnot x4$       | `clause 11_0` |
 
 Hence:
 
