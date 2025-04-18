@@ -17,9 +17,8 @@ Minden érték, $x$ (lánc, $xyz...$) bolyong az implikációs gráfon a követk
 - Súlyozás:
   - Osztódás (split)
 	- Amikor $chain$ választhat új változót, akkor a súlyát felezi (source választás)
-	- Amikor egy választott változó mellett, több ágra ($id$ | $neg$ $part$) is mehet, akkor osztódik, súlyokat megőrzi 
-    (target választás)
-		- amikor majd joinolás van vigyázni kell, hogy ezeket nem szabad direktben összeadni
+	- Amikor egy választott változó mellett, több ágra ($id$ | $neg$ $part$) is mehet, akkor nem osztódik
+	  hanem egy olyan láncá válik, ami egyszerre több helyen is van
   - Csatlakozás (join)
 	- Amikor olyan klauzurára ér, amivel körbeér, akkor kivonja a saját súlyát a kört megelőző részről
 	- Amikor olyan klauzurára ér, ami nem körbeérés, de már járt ott akkor csatlakozik ahhoz, ami 
