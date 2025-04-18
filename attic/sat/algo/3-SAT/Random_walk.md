@@ -34,7 +34,7 @@ $$
 (
 	(var \ x \land negpart_x) 
 	\lor 
-	(var \ \not x \land cl \ idpart_x)
+	(var \ \lnot x \land cl \ idpart_x)
 )
 $$
 
