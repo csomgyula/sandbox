@@ -6,6 +6,8 @@ Minden érték, $x$ (lánc, $xyz...$) bolyong az implikációs gráfon a követk
 
 - Mozgás 
   - Minden implikációt "linket" bejár 
+  - Minden linket az implikációra írt változóval jár be, ami azt jelenti, hogy a lánc bővül ezzel
+    a változóval
   - Amikor a $chain$ választhat változót egy klauzurára (csoportra), akkor 
     - megjegyzi a választását a klauzúrával egyetemben: (choice var x (list clauses))
 	- ha belefut mégegyszer ebbe a klauzúrába, akkor körbeért megáll
