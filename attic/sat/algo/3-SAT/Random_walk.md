@@ -31,7 +31,11 @@ $3-SAT \implies 2-SAT$ implikációk:
 
 $$
 (cl \ x \lor idpart_x) and (cl \ \lnot x \lor negpart_x) \implies 
-(var \ x \and negpart_x) \lor (var \ \not x \land cl \ idpart_x)
+(
+	(var \ x \land negpart_x) 
+	\lor 
+	(var \ \not x \land cl \ idpart_x)
+)
 $$
 
 $2-SAT \implies 2-SAT$ implikációk:
