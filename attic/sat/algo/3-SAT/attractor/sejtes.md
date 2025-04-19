@@ -39,3 +39,6 @@ Kell egy kör, ami tartalmazza
 
 - a változót
 - a kör összes változójának összes klózának legalább egy implikációs ágát
+
+
+ez egy részmegoldás, ha n-változós, akkor teljes megoldás
