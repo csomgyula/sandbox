@@ -1,6 +1,7 @@
-# cube
+# Rekurzív algoritmus
 
-Heurisztikus algoritmus:
+Rekurzív algoritmus a 3-SAT problémára
+
 
 ## Jelölések
 
@@ -65,3 +66,9 @@ Ha lehet több közös metszet is:
 		2. részleges megoldás, ha van fel nem jegyzett, ez esetben folytatom a többi clause-al 
 		   (goto Nulladik lépés)
 	
+## Diszkusszió
+
+- A kát eset két okból van külön választva:
+	- Az első sejtés az, hogy laza függés esetén mindig megoldható a 3-SAT
+	- Az erre született sejtetten (nem bizonyítottan) megfelelő algoritmus lett kiterjesztve 
+	  az általános esetree
