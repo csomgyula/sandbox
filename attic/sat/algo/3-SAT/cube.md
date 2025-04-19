@@ -11,7 +11,8 @@ Ha bármely clause max. 1 közös változóval rendelkezik, akkor megcsinálhat�
 	1. Választok két változót tetszőlegesen: $var_1 \in C_1, var_2 \in C_2$
 	2. Beállítom $var_1, var_2$ értékét $C_1, C_2$-nek megfelelően
 2. N. lépés: 
-	1. Választok két már kiválasztott változót $var_1', var_2'$ 
+	1. Választok két már kiválasztott változót $var_1', var_2'$ (ami párban még nem volt választva)
+		1. feljegyzem a pár-választást
 	2. Kiválasztom azt a clause-t, ami ezeket tartalmazza $l_1 \ var_1' \lor l_2 var_2' \lor \ l_3 var_3$
 	3. $var_3$-at $l_3$-nak megfelelőre állítom
 
@@ -21,12 +22,14 @@ Ha lehet több közös metszet is:
 
 1. Első lépés: Választok két clause-t: $C_1, C_2$
 2. Loop az összes lehetséges változóra $(var_1, var_2) \in C_1 \times C_2$-ben`
-	- Első lépés: Megfelelően beállítom $var_1, var_2$ értékét $C_1, C_2$-nek megfelelően
-	- N. lépés: 
-	  - Választok két már kiválasztott változót $var_1' = b_1 , var_2' = b_2$ 
-	  - Kiválasztom azt a clause-t, ami ezeket tartalmazza, negálva:  
-		$\lnot . b_1 \ var_1 \lor \lnot . b_2 var_2 \lor \ l_3 var_3$
-	  - $var_3$-at $l_3$-nak megfelelőre állítom
+	1. Első lépés: Megfelelően beállítom $var_1, var_2$ értékét $C_1, C_2$-nek megfelelően
+	2. N. lépés: 
+		1. Választok két már kiválasztott változót $var_1' = b_1 , var_2' = b_2$ (ami még nem volt választva)
+			1. feljegyzem a pár-választást
+		2. Kiválasztom azt a clause-t, ami ezeket tartalmazza, negálva:  
+		   $\lnot . b_1 \ var_1 \lor \lnot . b_2 var_2 \lor \ l_3 var_3$
+		3. Ha nincs ilyen, akkor folytatom az N+1. lépéssel
+		4. $var_3$-at $l_3$-nak megfelelőre állítom
 3. Megnézem, hogy van-e olyan, amit senki nem ront el:
-	- Ha van, akkor az megoldás
-	- Ha nincs, akkor unsat
+	1. Ha van, akkor az megoldás
+	2. Ha nincs, akkor unsat
