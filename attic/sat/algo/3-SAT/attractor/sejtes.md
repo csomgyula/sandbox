@@ -21,5 +21,21 @@ $$
 
 és nem vezet ki a fenti kör, nincs olyan klóz, ami 
 
-
 - nem megoldható, ha befut egy attraktorba????
+
+
+- Nem elég a klóz, (klóz, változó) kell
+- Nem Hamilton kör kell, hanem valszeg Euler-szerű kör, ami végigsétál az összes élen, nem feltétlen egyszer
+- És nem is kell kör, elég hogy ne fusson bele olyan attraktorba, ami az ellentéte
+
+Tartalmaznia kell 
+- az összes klózát legalább egy ágon, 
+- tranzitíve, azaz 
+  - ha választott egy ágat, akkor
+  - az azon az ágon lévő változó összes klózát is tartalmazni kell legalább egy ágon
+  - amihez elég lehet valami körszerű képződmény...
+  
+Kell egy kör, ami tartalmazza
+
+- a változót
+- a kör összes változójának összes klózának legalább egy implikációs ágát
