@@ -62,14 +62,19 @@ elfordulhat több kikötésben):
 			1. Ha nincs ilyen, akkor folytatom az N+1. lépéssel
 			2. Ha van, akkor feljegyzem a kikötést a párhoz
 		3. $var_3$-at $l_3$-nak megfelelőre állítom
-3. Megnézem, hogy van-e olyan, amit senki nem ront el:
-	1. Ha nincs, akkor  (sejtésem szerint) unsat
-	2. Ha van, akkor (sejtésem szerint)
+3. Megnézem, hogy a loopban előállt lekötött változók sorozataira ($var_1 = bool_1, var_2 = bool_2, ...$) 
+   van-e olyan, ami nem mond ellent (+) a hozzá fel nem jegyzett kikötéseknek:
+	1. Ha nincs, akkor  (sejtésem szerint) a probléma UNSAT
+	2. Ha van, akkor (sejtésem szerint):
 		1. az teljes megoldás ha minden kikötést feljegyeztem, illetve a fel nem jegyzettek tartalmaznak
 	       feljegyzett változót
 		2. részleges megoldás, ha van fel nem jegyzett kikötés, ami nem tartalmazza a feljegyzett változókat, 
-		   ez esetben folytatom a többi clause-al (goto Nulladik lépés)
+		   ez esetben folytatom a többi kikötéssel (goto Nulladik lépés)
 	
+(+) Megjegyzés: Lekötött változók egy sorozata akkor nem mond ellent egy kikötésnek, ha 
+- kielégíti kikötést, vagy	
+- a kikötés egyik változót sem tartalmazza 
+
 ## Diszkusszió
 
 - A két eset két okból van külön választva:
