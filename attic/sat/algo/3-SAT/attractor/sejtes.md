@@ -40,5 +40,13 @@ Kell egy kör, ami tartalmazza
 - a változót
 - a kör összes változójának összes klózának legalább egy implikációs ágát
 
-
 ez egy részmegoldás, ha n-változós, akkor teljes megoldás
+
+Szóval, nem kör kell hanem 
+- páros gráf, ami lefedi az összes változót és 
+- az összes klózt.
+
+Ez egy megoldás, de ez kevés, el kell rontani a többit:-)
+
+Ezt kell levezetni azokra, ami nem megoldás: $x = bool \implies x = \lnot bool$ ha SAT.
+Vagy ezt kell levezetni minden változóra: $x = bool \iff x = \lnot bool$ ha UNSAT.
